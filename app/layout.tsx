@@ -22,6 +22,10 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'MAXFIT | Unisex & Family Gym - Sonarpur, Kolkata',
   description: 'MAXFIT is a premium unisex and family gym in Sonarpur, Kolkata, offering modern equipment, personal training, group classes, and wellness programs for all ages.',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({

@@ -7,7 +7,7 @@ export default function LocationMap() {
             FIND <span className="text-primary">US</span>
           </h2>
           <p className="section-subtitle max-w-2xl mx-auto">
-            Visit our gym in Sonarpur, Kolkata for a tour or to speak with our team in person
+            Visit our Maxfit Unisex & Family gym in Sonarpur, Kolkata for a tour or to speak with our team in person
           </p>
         </div>
 
@@ -29,7 +29,7 @@ export default function LocationMap() {
             <div className="text-center md:text-left">
               <h3 className="text-lg font-bold mb-2">Address</h3>
               <p className="text-muted-foreground">
-                123 Fitness Road, Sonarpur<br />
+                Mathurapur, Prantikpally, Sonarpur<br />
                 Kolkata, West Bengal 700150<br />
                 India
               </p>
@@ -44,8 +44,8 @@ export default function LocationMap() {
             <div className="text-center md:text-right">
               <h3 className="text-lg font-bold mb-2">Contact</h3>
               <p className="text-muted-foreground">
-                Phone: +91 98765 43210<br />
-                Email: info@maxfitgym.com
+                Phone: +91 80172 01852<br />
+                Email: maxfitsonarpur@gmail.com
               </p>
             </div>
           </div>
