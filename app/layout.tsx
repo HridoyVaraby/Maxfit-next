@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   title: 'MAXFIT | Unisex & Family Gym - Sonarpur, Kolkata',
   description: 'MAXFIT is a premium unisex and family gym in Sonarpur, Kolkata, offering modern equipment, personal training, group classes, and wellness programs for all ages.',
   icons: {
-    icon: '/logo2.jpg',
-    apple: '/logo2.jpg',
+    icon: '/favicon.png',
+    apple: '/favicon.png',
   },
 };
 
