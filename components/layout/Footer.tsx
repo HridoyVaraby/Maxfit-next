@@ -98,7 +98,7 @@ export default function Footer() {
 
         <div className="border-t border-muted/20 mt-12 pt-6 text-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} MAXFIT Gym. All rights reserved.
+            © {new Date().getFullYear()} <a href="/" className="text-primary hover:underline">MAXFIT</a> Gym. All rights reserved. Developed by <a href="https://varabit.com" className="hover:underline">Varabit</a> Webdesign & Development.
           </p>
         </div>
       </div>
