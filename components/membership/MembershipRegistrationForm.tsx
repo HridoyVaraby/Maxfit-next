@@ -50,9 +50,6 @@ const formSchema = z.object({
   membershipType: z.enum(['starter', 'proPlus', 'elite'], {
     required_error: 'Please select a membership plan.',
   }),
-  membershipDuration: z.enum(['monthly', 'quarterly', 'yearly'], {
-    required_error: 'Please select a membership duration.',
-  }),
   startDate: z.date({
     required_error: 'Please select your preferred start date.',
   }),
@@ -91,7 +88,6 @@ export default function MembershipRegistrationForm() {
       hasHealthConditions: false,
       healthConditionsDetails: '',
       membershipType: 'proPlus',
-      membershipDuration: 'monthly',
       referralSource: '',
       fitnessGoals: '',
       termsAccepted: false,
@@ -418,15 +414,15 @@ export default function MembershipRegistrationForm() {
                         >
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="starter" id="reg-starter" />
-                            <Label htmlFor="reg-starter">Starter - Basic equipment access and limited classes</Label>
+                            <Label htmlFor="reg-starter">Monthly</Label>
                           </div>
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="proPlus" id="reg-proPlus" />
-                            <Label htmlFor="reg-proPlus">Pro Plus - Full equipment access and unlimited classes</Label>
+                            <Label htmlFor="reg-proPlus">Yearly</Label>
                           </div>
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="elite" id="reg-elite" />
-                            <Label htmlFor="reg-elite">Elite - Premium access with personal training sessions</Label>
+                            <Label htmlFor="reg-elite">Half-Yearly</Label>
                           </div>
                         </RadioGroup>
                       </FormControl>
@@ -440,28 +436,7 @@ export default function MembershipRegistrationForm() {
                   )}
                 />
 
-                <FormField
-                  control={form.control}
-                  name="membershipDuration"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Membership Duration</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select a duration" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="monthly">Monthly</SelectItem>
-                          <SelectItem value="quarterly">Quarterly (Save 10%)</SelectItem>
-                          <SelectItem value="yearly">Yearly (Save 20%)</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+
 
                 <FormField
                   control={form.control}

@@ -1,6 +1,5 @@
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
@@ -68,20 +67,13 @@ export default function MembershipPlans() {
           </p>
         </div>
 
-        <Tabs defaultValue="monthly" className="w-full">
-          <TabsList className="grid w-full max-w-md grid-cols-3 mx-auto mb-12">
-            <TabsTrigger value="monthly">Monthly</TabsTrigger>
-            <TabsTrigger value="quarterly">Quarterly</TabsTrigger>
-            <TabsTrigger value="yearly">Yearly</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="monthly" className="space-y-12">
+        <div className="space-y-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="membership-card animate-fadeInUp">
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Starter</h3>
+                  <h3 className="text-xl font-bold">Monthly</h3>
                   <div className="mt-4 mb-2">
-                    <span className="text-4xl font-bold">₹1,999</span>
+                    <span className="text-4xl font-bold">₹499</span>
                     <span className="text-muted-foreground">/month</span>
                   </div>
                   <p className="text-sm text-muted-foreground">No long-term commitment</p>
@@ -89,26 +81,30 @@ export default function MembershipPlans() {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Basic Equipment Access</span>
+                    <span>Full Equipment Access</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>2 Group Classes/Week</span>
+                    <span>Unlimited Group Classes</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Basic Wellness Support</span>
+                    <span>Nutrition Support</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
+                    <span>Fitness Assessment</span>
                   </li>
                 </ul>
-                <Button variant="outline" className="w-full">Join Now</Button>
+                {/*<Button variant="outline" className="w-full">Join Now</Button>*/}
               </div>
 
               <div className="membership-card popular animate-fadeInUp animate-delay-100">
                 <div className="popular-badge">Popular</div>
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Pro Plus</h3>
+                  <h3 className="text-xl font-bold">Yearly</h3>
                   <div className="mt-4 mb-2">
-                    <span className="text-4xl font-bold">₹1,799</span>
+                    <span className="text-4xl font-bold">₹4,999</span>
                     <span className="text-muted-foreground">/month</span>
                   </div>
                   <p className="text-sm text-muted-foreground">Billed monthly with 3-month minimum</p>
@@ -138,7 +134,7 @@ export default function MembershipPlans() {
 
               <div className="membership-card animate-fadeInUp animate-delay-200">
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Elite</h3>
+                  <h3 className="text-xl font-bold">Half-Yearly</h3>
                   <div className="mt-4 mb-2">
                     <span className="text-4xl font-bold">₹2,499</span>
                     <span className="text-muted-foreground">/month</span>
@@ -148,22 +144,22 @@ export default function MembershipPlans() {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Premium Equipment Access</span>
+                    <span>Full Equipment Access</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Personal Trainer (2 sessions/month)</span>
+                    <span>Unlimited Group Classes</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Nutritional Plan</span>
+                    <span>Nutrition Support</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Progress Tracking</span>
+                    <span>Fitness Assessment</span>
                   </li>
                 </ul>
-                <Button variant="outline" className="w-full">Join Now</Button>
+                {/*<Button variant="outline" className="w-full">Join Now</Button>*/}
               </div>
             </div>
 
@@ -192,194 +188,7 @@ export default function MembershipPlans() {
                 </table>
               </div>
             </div>
-          </TabsContent>
-          
-          <TabsContent value="quarterly">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="membership-card">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Starter</h3>
-                  <div className="mt-4 mb-2">
-                    <span className="text-4xl font-bold">₹4,999</span>
-                    <span className="text-muted-foreground">/quarter</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Save ₹1,000 over monthly</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Basic Equipment Access</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>2 Group Classes/Week</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Basic Wellness Support</span>
-                  </li>
-                </ul>
-                <Button variant="outline" className="w-full">Join Now</Button>
-              </div>
-
-              <div className="membership-card popular">
-                <div className="popular-badge">Popular</div>
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Pro Plus</h3>
-                  <div className="mt-4 mb-2">
-                    <span className="text-4xl font-bold">₹4,999</span>
-                    <span className="text-muted-foreground">/quarter</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Save ₹1,400 over monthly</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Full Equipment Access</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Unlimited Group Classes</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Nutrition Support</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Fitness Assessment</span>
-                  </li>
-                </ul>
-                <Button className="w-full" asChild>
-                    <Link href="/membership/register">Join Now</Link>
-                  </Button>
-              </div>
-
-              <div className="membership-card">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Elite</h3>
-                  <div className="mt-4 mb-2">
-                    <span className="text-4xl font-bold">₹6,999</span>
-                    <span className="text-muted-foreground">/quarter</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Save ₹1,500 over monthly</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Premium Equipment Access</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Personal Trainer (2 sessions/month)</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Nutritional Plan</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Progress Tracking</span>
-                  </li>
-                </ul>
-                <Button variant="outline" className="w-full">Join Now</Button>
-              </div>
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="yearly">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="membership-card">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Starter</h3>
-                  <div className="mt-4 mb-2">
-                    <span className="text-4xl font-bold">₹19,999</span>
-                    <span className="text-muted-foreground">/year</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Save ₹3,990 over monthly</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Basic Equipment Access</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>2 Group Classes/Week</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Basic Wellness Support</span>
-                  </li>
-                </ul>
-                <Button variant="outline" className="w-full">Join Now</Button>
-              </div>
-
-              <div className="membership-card popular">
-                <div className="popular-badge">Popular</div>
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Pro Plus</h3>
-                  <div className="mt-4 mb-2">
-                    <span className="text-4xl font-bold">₹17,999</span>
-                    <span className="text-muted-foreground">/year</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Save ₹6,590 over monthly</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Full Equipment Access</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Unlimited Group Classes</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Nutrition Support</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Fitness Assessment</span>
-                  </li>
-                </ul>
-                <Button className="w-full" asChild>
-                    <Link href="/membership/register">Join Now</Link>
-                  </Button>
-              </div>
-
-              <div className="membership-card">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Elite</h3>
-                  <div className="mt-4 mb-2">
-                    <span className="text-4xl font-bold">₹25,999</span>
-                    <span className="text-muted-foreground">/year</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Save ₹9,990 over monthly</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Premium Equipment Access</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Personal Trainer (2 sessions/month)</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Nutritional Plan</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                    <span>Progress Tracking</span>
-                  </li>
-                </ul>
-                <Button variant="outline" className="w-full">Join Now</Button>
-              </div>
-            </div>
-          </TabsContent>
-        </Tabs>
+          </div>
       </div>
     </section>
   );
