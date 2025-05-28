@@ -10,13 +10,13 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="relative h-full w-full">
           <Image
-            src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/banner3.webp"
             alt="Gym background"
             fill
             priority
             className="object-cover"
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(249,201,27,0.3), rgba(0,0,0,0.7))' }}></div>
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(249, 201, 27, 0.03), rgba(0,0,0,0.7))' }}></div>
         </div>
       </div>
 
