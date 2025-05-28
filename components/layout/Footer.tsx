@@ -82,15 +82,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-muted-foreground">123 Fitness Road, Sonarpur, Kolkata, West Bengal 700150</span>
+                <span className="text-muted-foreground">Mathurapur, Prantikpally, Sonarpur, Kolkata, West Bengal 700150, India</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-primary" />
-                <span className="text-muted-foreground">+91 98765 43210</span>
+                <span className="text-muted-foreground">+91 80172 01852</span>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-primary" />
-                <span className="text-muted-foreground">info@maxfitgym.com</span>
+                <span className="text-muted-foreground">maxfitsonarpur@gmail.com</span>
               </li>
             </ul>
           </div>
