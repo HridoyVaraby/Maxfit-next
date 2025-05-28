@@ -1,7 +1,6 @@
 import MembershipHero from '@/components/membership/MembershipHero';
 import MembershipPlans from '@/components/membership/MembershipPlans';
 import FAQSection from '@/components/membership/FAQSection';
-import JoinForm from '@/components/membership/JoinForm';
 
 export const metadata = {
   title: 'Membership Plans | MAXFIT Gym - Sonarpur, Kolkata',
@@ -13,7 +12,6 @@ export default function MembershipPage() {
     <>
       <MembershipHero />
       <MembershipPlans />
-      <JoinForm />
       <FAQSection />
     </>
   );
