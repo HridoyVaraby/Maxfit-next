@@ -67,10 +67,15 @@ export default function Header() {
 
         {/* Mobile Navigation Toggle */}
         <div className="md:hidden flex items-center">
-          <ThemeToggle />
+          <div className={isScrolled ? 'text-foreground' : 'text-white'}>
+            <ThemeToggle />
+          </div>
           <button 
             onClick={toggleMenu}
-            className="ml-4 p-2 text-foreground"
+            className={cn(
+              "ml-4 p-2",
+              isScrolled ? 'text-foreground' : 'text-white'
+            )}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -88,10 +93,7 @@ export default function Header() {
                   key={link.path} 
                   href={link.path}
                   className={cn(
-                    'py-2 font-medium transition-colors',
-                    isScrolled 
-                      ? 'text-foreground hover:text-primary' 
-                      : 'text-white hover:text-primary',
+                    'py-2 font-medium transition-colors text-foreground hover:text-primary',
                     pathname === link.path && 'text-primary font-semibold'
                   )}
                   onClick={() => setIsMenuOpen(false)}
