@@ -10,14 +10,14 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="relative h-full w-full">
           <Image
-            src="/banner3.webp"
+            src="/banner2.webp"
             alt="Gym background"
             fill
             priority
             className="object-cover hidden md:block"
           />
           <Image
-            src="/mobile_banner.webp"
+            src="/mobile_banner2.webp"
             alt="Gym background mobile"
             fill
             priority
