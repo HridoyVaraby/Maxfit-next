@@ -98,16 +98,16 @@ export const PROGRAMS = [
 
 export const TRAINERS = [
   {
-    name: 'Rajiv Kapoor',
+    name: '	Indrajit Haldar',
     title: 'Founder',
     bio: 'Visionary fitness enthusiast who established MAXFIT with a mission to transform lives through accessible, quality fitness training.',
-    image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: '/team1.webp',
   },
   {
     name: 'Anita Desai',
     title: 'Managing Director',
     bio: 'Business strategist with 15+ years in the fitness industry, leading MAXFIT\'s operations and expansion across Kolkata.',
-    image: 'https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: '/team2.webp',
   },
   {
     name: 'Rahul Sharma',
