@@ -70,7 +70,7 @@ export default function Header() {
           <ThemeToggle />
           <button 
             onClick={toggleMenu}
-            className="ml-4 p-2 text-white"
+            className="ml-4 p-2 text-foreground"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
