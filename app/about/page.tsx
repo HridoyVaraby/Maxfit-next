@@ -1,6 +1,6 @@
 import AboutHero from '@/components/about/AboutHero';
 import GymStory from '@/components/about/GymStory';
-import TrainerShowcase from '@/components/about/TrainerShowcase';
+import TeamSection from '@/components/about/TeamSection';
 import CallToAction from '@/components/home/CallToAction';
 
 export const metadata = {
@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <AboutHero />
       <GymStory />
-      <TrainerShowcase />
+      <TeamSection />
       <CallToAction />
     </>
   );

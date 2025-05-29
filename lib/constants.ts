@@ -98,8 +98,20 @@ export const PROGRAMS = [
 
 export const TRAINERS = [
   {
+    name: 'Rajiv Kapoor',
+    title: 'Founder',
+    bio: 'Visionary fitness enthusiast who established MAXFIT with a mission to transform lives through accessible, quality fitness training.',
+    image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  },
+  {
+    name: 'Anita Desai',
+    title: 'Managing Director',
+    bio: 'Business strategist with 15+ years in the fitness industry, leading MAXFIT\'s operations and expansion across Kolkata.',
+    image: 'https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  },
+  {
     name: 'Rahul Sharma',
-    title: 'Head Trainer',
+    title: 'Senior Trainer',
     bio: 'Certified fitness expert with 10+ years of experience in strength training and functional fitness.',
     image: 'https://images.pexels.com/photos/6456300/pexels-photo-6456300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
@@ -108,12 +120,6 @@ export const TRAINERS = [
     title: 'Yoga Instructor',
     bio: 'International yoga alliance certified instructor specializing in Hatha and Power Yoga techniques.',
     image: 'https://images.pexels.com/photos/5384538/pexels-photo-5384538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-  },
-  {
-    name: 'Vikram Patel',
-    title: 'Nutrition Expert',
-    bio: 'Dietitian and wellness coach helping members achieve holistic health through balanced nutrition.',
-    image: 'https://images.pexels.com/photos/6456293/pexels-photo-6456293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
 ];
 
