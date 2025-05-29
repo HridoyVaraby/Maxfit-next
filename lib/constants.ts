@@ -98,29 +98,29 @@ export const PROGRAMS = [
 
 export const TRAINERS = [
   {
-    name: 'Indrajit Haldar',
-    title: 'Founder',
-    bio: 'Visionary fitness enthusiast who established MAXFIT with a mission to transform lives through accessible, quality fitness training.',
-    image: '/team1.webp',
+    name: "Indrajit Haldar",
+    title: "Founder",
+    bio: "Visionary fitness enthusiast who established MAXFIT with a mission to transform lives through accessible.",
+    image: "/team1.webp"
   },
   {
-    name: 'Mrinmayee Haldar',
-    title: 'Managing Director',
-    bio: 'Business strategist with 15+ years in the fitness industry, leading MAXFIT\'s operations and expansion across Kolkata.',
-    image: '/team2.webp',
+    name: "Mrinmayee Haldar",
+    title: "Managing Director",
+    bio: "Business strategist with 15+ years in the fitness industry, leading MAXFIT's operations and expansion across Kolkata.",
+    image: "/team2.webp"
   },
   {
-    name: 'Rahul Sharma',
-    title: 'Senior Trainer',
-    bio: 'Certified fitness expert with 10+ years of experience in strength training and functional fitness.',
-    image: 'https://images.pexels.com/photos/6456300/pexels-photo-6456300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    name: "Pavel",
+    title: "Trainer",
+    bio: "Expert in strong interpersonal communication skills, strength training, exercise program development, client assessment, weight management, and floor management.",
+    image: "/team3.webp"
   },
   {
-    name: 'Priya Malhotra',
-    title: 'Yoga Instructor',
-    bio: 'International yoga alliance certified instructor specializing in Hatha and Power Yoga techniques.',
-    image: 'https://images.pexels.com/photos/5384538/pexels-photo-5384538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-  },
+    name: "Sujan",
+    title: "Trainer",
+    bio: "Expert in cardio, Tabata, weight training, and strength training. Dedicated to optimizing performance.",
+    image: "/team4.webp"
+  }
 ];
 
 export const TESTIMONIALS = [

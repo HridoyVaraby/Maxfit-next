@@ -15,26 +15,31 @@ export default function TeamSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
           {TRAINERS.map((trainer, index) => (
             <div 
               key={trainer.name}
-              className="bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-fadeInUp group"
+              className="bg-background rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all animate-fadeInUp group hover:-translate-y-1 duration-300"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="relative h-80 w-full overflow-hidden">
+              <div className="relative h-[450px] w-full overflow-hidden">
                 <Image
                   src={trainer.image}
                   alt={trainer.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  priority={index < 2}
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-1">{trainer.name}</h3>
-                <p className="text-primary font-medium mb-4">{trainer.title}</p>
-                <p className="text-muted-foreground mb-4">{trainer.bio}</p>
-                <div className="flex space-x-4 text-muted-foreground">
+                <p className="text-primary font-medium mb-3">{trainer.title}</p>
+                <div className="h-24 overflow-hidden mb-4 relative">
+                  <p className="text-muted-foreground text-sm leading-relaxed">{trainer.bio}</p>
+                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-background to-transparent"></div>
+                </div>
+                <div className="flex justify-center space-x-4 text-muted-foreground">
                   <a href="#" className="hover:text-primary transition-colors" aria-label={`${trainer.name}'s Facebook`}>
                     <Facebook size={18} />
                   </a>
