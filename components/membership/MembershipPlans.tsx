@@ -170,9 +170,9 @@ export default function MembershipPlans() {
                   <thead>
                     <tr className="border-b">
                       <th className="text-left p-3 font-bold">Feature</th>
-                      <th className="text-center p-3 font-bold">Starter</th>
-                      <th className="text-center p-3 font-bold text-primary">Pro Plus</th>
-                      <th className="text-center p-3 font-bold">Elite</th>
+                      <th className="text-center p-3 font-bold">Monthly</th>
+                      <th className="text-center p-3 font-bold text-primary">Yearly</th>
+                      <th className="text-center p-3 font-bold">Half-Yearly</th>
                     </tr>
                   </thead>
                   <tbody>

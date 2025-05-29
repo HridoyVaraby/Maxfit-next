@@ -14,7 +14,14 @@ export default function Hero() {
             alt="Gym background"
             fill
             priority
-            className="object-cover"
+            className="object-cover hidden md:block"
+          />
+          <Image
+            src="/mobile_banner.webp"
+            alt="Gym background mobile"
+            fill
+            priority
+            className="object-cover block md:hidden"
           />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(249, 201, 27, 0.03), rgba(0,0,0,0.7))' }}></div>
         </div>
@@ -22,7 +29,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="container-custom relative z-10 text-white">
-        <div className="max-w-3xl animate-fadeInUp">
+        <div className="max-w-3xl animate-fadeInUp pt-16 md:pt-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
             YOUR DESTINATION FOR <span className="text-primary">HEALTH AND WELLNESS</span>
           </h1>
