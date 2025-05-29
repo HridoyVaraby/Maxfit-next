@@ -11,7 +11,7 @@ export default function GymStory() {
             </h2>
             <div className="w-16 h-1 bg-primary mb-6"></div>
             <p className="mb-4">
-              Founded in 2018, MAXFIT began as a small fitness studio in the heart of Sonarpur with a simple mission: to make quality fitness accessible to everyone in our community.
+              Founded in 2025, MAXFIT began as a small fitness studio in the heart of Sonarpur with a simple mission: to make quality fitness accessible to everyone in our community.
             </p>
             <p className="mb-4">
               What started as a modest facility has now grown into a comprehensive fitness center catering to individuals and families alike. Our founder, a fitness enthusiast from Kolkata, envisioned a space where people from all walks of life could pursue their health goals without intimidation.
