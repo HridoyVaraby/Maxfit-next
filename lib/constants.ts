@@ -98,13 +98,13 @@ export const PROGRAMS = [
 
 export const TRAINERS = [
   {
-    name: '	Indrajit Haldar',
+    name: 'Indrajit Haldar',
     title: 'Founder',
     bio: 'Visionary fitness enthusiast who established MAXFIT with a mission to transform lives through accessible, quality fitness training.',
     image: '/team1.webp',
   },
   {
-    name: 'Anita Desai',
+    name: 'Mrinmayee Haldar',
     title: 'Managing Director',
     bio: 'Business strategist with 15+ years in the fitness industry, leading MAXFIT\'s operations and expansion across Kolkata.',
     image: '/team2.webp',
