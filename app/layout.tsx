@@ -2,8 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat, Poppins } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import NavigationWrapper from '@/components/layout/NavigationWrapper';
 
 const montserrat = Montserrat({ 
   subsets: ['latin'],
@@ -37,9 +36,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${montserrat.variable} ${poppins.variable} font-poppins`}>
         <ThemeProvider attribute="class" defaultTheme="light">
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
+          <NavigationWrapper>
+            <main className="min-h-screen">{children}</main>
+          </NavigationWrapper>
         </ThemeProvider>
       </body>
     </html>
