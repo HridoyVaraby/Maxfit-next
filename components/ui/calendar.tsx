@@ -13,17 +13,25 @@ function Calendar({
   className,
   classNames,
   showOutsideDays = true,
+  captionLayout = 'dropdown', // Set default captionLayout to dropdown for better year/month selection
+  fromYear = 1940, // Start year for date of birth selection
+  toYear = new Date().getFullYear(), // Current year as end year
   ...props
 }: CalendarProps) {
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
       className={cn('p-3', className)}
+      captionLayout={captionLayout} // Enable dropdown for month/year selection
+      fromYear={fromYear} // Set the start year for the dropdown
+      toYear={toYear} // Set the end year for the dropdown
       classNames={{
         months: 'flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0',
         month: 'space-y-4',
         caption: 'flex justify-center pt-1 relative items-center',
         caption_label: 'text-sm font-medium',
+        caption_dropdowns: 'flex gap-1',
+        dropdown: 'cursor-pointer rounded-md bg-background px-2 py-1 text-sm font-medium border border-input hover:bg-accent hover:text-accent-foreground',
         nav: 'space-x-1 flex items-center',
         nav_button: cn(
           buttonVariants({ variant: 'outline' }),

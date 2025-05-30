@@ -258,6 +258,10 @@ export default function MembershipRegistrationForm() {
                               disabled={(date) =>
                                 date > new Date() || date < new Date("1900-01-01")
                               }
+                              defaultMonth={new Date(new Date().setFullYear(new Date().getFullYear() - 30))}
+                              captionLayout="dropdown"
+                              fromYear={1940}
+                              toYear={new Date().getFullYear()}
                               initialFocus
                             />
                           </PopoverContent>
