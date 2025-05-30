@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Montserrat, Poppins } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import NavigationWrapper from '@/components/layout/NavigationWrapper';
+import { Toaster } from '@/components/ui/sonner';
 
 const montserrat = Montserrat({ 
   subsets: ['latin'],
@@ -39,6 +40,7 @@ export default function RootLayout({
           <NavigationWrapper>
             <main className="min-h-screen">{children}</main>
           </NavigationWrapper>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
