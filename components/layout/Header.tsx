@@ -1,109 +1,103 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Dumbbell } from 'lucide-react';
-import { NAV_LINKS } from '@/lib/constants';
+import { Menu, X } from 'lucide-react';
 import MaxFitLogo from './MaxFitLogo';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './ThemeToggle';
+import { Button } from '@/components/ui/button';
+
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Programs', href: '/programs' },
+  { name: 'Membership', href: '/membership' },
+  { name: 'Gallery', href: '/gallery' },
+  { name: 'Contact', href: '/contact' },
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
+  // Handle scroll event to change header style
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 60) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
   return (
-    <header className={cn(
-      'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-      isScrolled 
-        ? 'bg-background/95 backdrop-blur-md shadow-md py-2' 
-        : 'bg-transparent py-4'
-    )}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center">
-          <MaxFitLogo className="h-12 w-auto" />
-        </Link>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-sm py-2' : 'bg-transparent py-4'}`}
+    >
+      <div className="container-custom">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <MaxFitLogo className="h-10 w-auto" />
+          </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {NAV_LINKS.map((link) => (
-            <Link 
-              key={link.path} 
-              href={link.path}
-              className={cn(
-                'font-medium transition-colors',
-                isScrolled 
-                  ? 'text-foreground hover:text-primary' 
-                  : 'text-white hover:text-primary',
-                pathname === link.path && 'text-primary font-semibold'
-              )}
-            >
-              {link.label}
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${pathname === item.href ? 'text-primary' : 'text-foreground/80 hover:text-foreground hover:bg-muted'}`}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Link href="/admin/login" className="ml-2">
+              <Button variant="outline" size="sm">
+                Admin
+              </Button>
             </Link>
-          ))}
-          <Button asChild>
-            <Link href="/membership">Join Now</Link>
-          </Button>
-          <ThemeToggle />
-        </nav>
-
-        {/* Mobile Navigation Toggle */}
-        <div className="md:hidden flex items-center">
-          <div className={isScrolled ? 'text-foreground' : 'text-white'}>
             <ThemeToggle />
+          </nav>
+
+          {/* Mobile Navigation Toggle */}
+          <div className="flex items-center md:hidden space-x-4">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 rounded-md text-foreground/80 hover:text-foreground hover:bg-muted"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
-          <button 
-            onClick={toggleMenu}
-            className={cn(
-              "ml-4 p-2",
-              isScrolled ? 'text-foreground' : 'text-white'
-            )}
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-background border-t">
-          <div className="container mx-auto px-4 py-4">
-            <nav className="flex flex-col space-y-4">
-              {NAV_LINKS.map((link) => (
-                <Link 
-                  key={link.path} 
-                  href={link.path}
-                  className={cn(
-                    'py-2 font-medium transition-colors text-foreground hover:text-primary',
-                    pathname === link.path && 'text-primary font-semibold'
-                  )}
-                  onClick={() => setIsMenuOpen(false)}
+          <div className="container-custom py-4">
+            <nav className="flex flex-col space-y-3">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`px-3 py-2 text-sm font-medium rounded-md ${pathname === item.href ? 'text-primary bg-primary/10' : 'text-foreground/80 hover:text-foreground hover:bg-muted'}`}
                 >
-                  {link.label}
+                  {item.name}
                 </Link>
               ))}
-              <Button asChild className="w-full mt-4">
-                <Link href="/membership">Join Now</Link>
-              </Button>
+              <Link href="/admin/login" className="px-3 py-2 text-sm font-medium rounded-md text-foreground/80 hover:text-foreground hover:bg-muted">
+                Admin
+              </Link>
             </nav>
           </div>
         </div>

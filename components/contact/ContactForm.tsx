@@ -34,17 +34,43 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(values: FormValues) {
+  async function onSubmit(values: FormValues) {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Import supabase client dynamically to avoid SSR issues
+      const { createBrowserSupabaseClient } = await import('@/lib/supabase-browser');
+      const supabase = createBrowserSupabaseClient();
+      
+      // Insert form data into Supabase
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: values.name,
+            email: values.email,
+            phone: values.phone,
+            subject: values.subject,
+            message: values.message
+          }
+        ]);
+      
+      if (error) {
+        throw error;
+      }
+      
       toast.success('Message sent successfully!', {
         description: 'We will get back to you as soon as possible.',
       });
-      setIsSubmitting(false);
       form.reset();
-    }, 1500);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('Failed to send message', {
+        description: 'Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (

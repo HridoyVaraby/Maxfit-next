@@ -95,17 +95,56 @@ export default function MembershipRegistrationForm() {
     },
   });
 
-  function onSubmit(values: FormValues) {
+  async function onSubmit(values: FormValues) {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Import supabase client dynamically to avoid SSR issues
+      const { createBrowserSupabaseClient } = await import('@/lib/supabase-browser');
+      const supabase = createBrowserSupabaseClient();
+      
+      // Insert form data into Supabase
+      const { error } = await supabase
+        .from('membership_registrations')
+        .insert([
+          {
+            first_name: values.firstName,
+            last_name: values.lastName,
+            email: values.email,
+            phone: values.phone,
+            date_of_birth: values.dateOfBirth,
+            gender: values.gender,
+            address: values.address,
+            city: values.city,
+            pincode: values.pincode,
+            emergency_contact_name: values.emergencyContactName,
+            emergency_contact_phone: values.emergencyContactPhone,
+            emergency_contact_relation: values.emergencyContactRelation,
+            has_health_conditions: values.hasHealthConditions,
+            health_conditions_details: values.healthConditionsDetails,
+            membership_type: values.membershipType,
+            start_date: values.startDate,
+            referral_source: values.referralSource,
+            fitness_goals: values.fitnessGoals
+          }
+        ]);
+      
+      if (error) {
+        throw error;
+      }
+      
       toast.success('Registration submitted successfully!', {
         description: 'We will contact you shortly to complete your membership.',
       });
-      setIsSubmitting(false);
       form.reset();
-    }, 1500);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('Failed to submit registration', {
+        description: 'Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
