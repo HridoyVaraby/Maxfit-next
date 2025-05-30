@@ -1,9 +1,10 @@
 import { createServerSupabaseClient } from '@/lib/supabase-server';
 import { formatDate } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { LuEye, LuMail } from 'react-icons/lu';
+import { LuMail } from 'react-icons/lu';
 import { Card, CardContent } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import ContactViewDialog from '@/components/admin/ContactViewDialog';
 
 export const metadata = {
   title: 'Contact Submissions | MAXFIT Gym Admin',
@@ -65,9 +66,7 @@ export default async function ContactsAdminPage() {
                       </span>
                     </TableCell>
                     <TableCell className="text-right">
-                      <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                        <LuEye className="h-4 w-4" />
-                      </Button>
+                      <ContactViewDialog contact={contact} />
                     </TableCell>
                   </TableRow>
                 ))

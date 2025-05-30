@@ -2,8 +2,9 @@ import { createServerSupabaseClient } from '@/lib/supabase-server';
 import { Card, CardContent } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
-import { LuEye, LuDownload } from 'react-icons/lu';
+import { LuDownload } from 'react-icons/lu';
 import { formatDate } from '@/lib/utils';
+import MembershipViewDialog from '@/components/admin/MembershipViewDialog';
 
 export const metadata = {
   title: 'Membership Registrations | MAXFIT Gym Admin',
@@ -81,9 +82,7 @@ export default async function MembershipsAdminPage() {
                       </span>
                     </TableCell>
                     <TableCell className="text-right">
-                      <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                        <LuEye className="h-4 w-4" />
-                      </Button>
+                      <MembershipViewDialog membership={membership} />
                     </TableCell>
                   </TableRow>
                 ))
