@@ -42,7 +42,7 @@ export default function Hero() {
                 Join Now <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="text-base px-8 py-6 border-white text-black hover:text-secondary hover:bg-white">
+            <Button variant="outline" size="lg" className="text-base px-8 py-6 border-white text-black dark:text-white hover:text-secondary hover:bg-white dark:hover:text-secondary">
               <Link href="/programs">
                 Explore Programs
               </Link>
