@@ -13,9 +13,9 @@ export default function MembershipPlans() {
     },
     {
       name: 'Operating Hours',
-      starter: '6 AM - 9 PM',
-      proPlus: '5 AM - 10 PM',
-      elite: '24/7 Access',
+      starter: 'Monday to Sunday',
+      proPlus: '6 AM - 12:30 PM',
+      elite: '4:30 AM - 10:30 PM',
     },
     {
       name: 'Group Classes',
@@ -63,7 +63,7 @@ export default function MembershipPlans() {
             CHOOSE YOUR <span className="text-primary">PLAN</span>
           </h2>
           <p className="section-subtitle max-w-2xl mx-auto">
-            Flexible membership options designed to fit your schedule and goals
+            Flexible membership options designed to fit your schedule and goals. Opens from Monday to Sunday at 6am to 12.30pm and 4.30pm to 10.30 pm
           </p>
         </div>
 
