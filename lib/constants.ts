@@ -112,13 +112,13 @@ export const TRAINERS = [
   {
     name: "Somnath Haldar",
     title: "Senior Advisor",
-    bio: "Expert in strong interpersonal communication skills, strength training, exercise program development, client assessment, weight management, and floor management.",
+    bio: "With years of expertise in fitness and business strategy, Somnath provides valuable guidance on the administration and overall branding of Maxfit Fitness & Gym.",
     image: "/team5.webp"
   },
   {
     name: "Rajesh Mondal",
     title: "Senior Advisor",
-    bio: "Expert in cardio, Tabata, weight training, and strength training. Dedicated to optimizing performance.",
+    bio: "Brings a wealth of experience in gym management and brand development, ensuring Maxfit Fitness & Gym stays at the forefront of excellence.",
     image: "/team6.webp"
   },
   {
