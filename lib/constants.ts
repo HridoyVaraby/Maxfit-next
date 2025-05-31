@@ -110,6 +110,18 @@ export const TRAINERS = [
     image: "/team2.webp"
   },
   {
+    name: "Somnath Haldar",
+    title: "Senior Advisor",
+    bio: "Expert in strong interpersonal communication skills, strength training, exercise program development, client assessment, weight management, and floor management.",
+    image: "/team5.webp"
+  },
+  {
+    name: "Rajesh Mondal",
+    title: "Senior Advisor",
+    bio: "Expert in cardio, Tabata, weight training, and strength training. Dedicated to optimizing performance.",
+    image: "/team6.webp"
+  },
+  {
     name: "Pavel",
     title: "Trainer/Fitness Advisor",
     bio: "Expert in strong interpersonal communication skills, strength training, exercise program development, client assessment, weight management, and floor management.",
@@ -120,7 +132,7 @@ export const TRAINERS = [
     title: "Trainer/Fitness Advisor",
     bio: "Expert in cardio, Tabata, weight training, and strength training. Dedicated to optimizing performance.",
     image: "/team4.webp"
-  }
+  },
 ];
 
 export const TESTIMONIALS = [
