@@ -40,7 +40,7 @@ export const MEMBERSHIP_PLANS = [
     color: 'default',
   },
   {
-    name: 'Yearly',
+    name: '12 Months',
     price: '4999',
     duration: 'Year',
     features: ['Full Equipment Access', 'Unlimited Group Classes', 'Nutrition Support', 'Fitness Assessment'],
@@ -48,9 +48,9 @@ export const MEMBERSHIP_PLANS = [
     color: 'yellow',
   },
   {
-    name: 'Half-Yearly',
+    name: '6 Months',
     price: '2499',
-    duration: 'Half-Year',
+    duration: '6-months',
     features: ['Full Equipment Access', 'Unlimited Group Classes', 'Nutrition Support', 'Fitness Assessment'],
     popular: false,
     color: 'default',
@@ -106,18 +106,18 @@ export const TRAINERS = [
   {
     name: "Mrinmayee Haldar",
     title: "Managing Director",
-    bio: "Business strategist with 15+ years in the fitness industry, leading MAXFIT's operations and expansion across Kolkata.",
+    bio: "Business strategist with 2+ years in the fitness industry, leading MAXFIT's operations.",
     image: "/team2.webp"
   },
   {
     name: "Pavel",
-    title: "Trainer",
+    title: "Trainer/Fitness Advisor",
     bio: "Expert in strong interpersonal communication skills, strength training, exercise program development, client assessment, weight management, and floor management.",
     image: "/team3.webp"
   },
   {
     name: "Sujan",
-    title: "Trainer",
+    title: "Trainer/Fitness Advisor",
     bio: "Expert in cardio, Tabata, weight training, and strength training. Dedicated to optimizing performance.",
     image: "/team4.webp"
   }

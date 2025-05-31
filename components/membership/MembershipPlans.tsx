@@ -63,7 +63,7 @@ export default function MembershipPlans() {
             CHOOSE YOUR <span className="text-primary">PLAN</span>
           </h2>
           <p className="section-subtitle max-w-2xl mx-auto">
-            Flexible membership options designed to fit your schedule and goals. Opens from Monday to Sunday at 6am to 12.30pm and 4.30pm to 10.30 pm
+            Flexible membership options designed to fit your schedule and goals. Opens from Monday to Sunday at 6am to 12.30pm and 4.30pm to 10pm
           </p>
         </div>
 
@@ -102,12 +102,12 @@ export default function MembershipPlans() {
               <div className="membership-card popular animate-fadeInUp animate-delay-100">
                 <div className="popular-badge">Popular</div>
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Yearly</h3>
+                  <h3 className="text-xl font-bold">12 Month</h3>
                   <div className="mt-4 mb-2">
                     <span className="text-4xl font-bold">₹4,999</span>
-                    <span className="text-muted-foreground">/month</span>
+                    <span className="text-muted-foreground">/year</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">Billed monthly with 3-month minimum</p>
+                  <p className="text-sm text-muted-foreground">Billed yearly with 1 year minimum</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
@@ -134,12 +134,12 @@ export default function MembershipPlans() {
 
               <div className="membership-card animate-fadeInUp animate-delay-200">
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold">Half-Yearly</h3>
+                  <h3 className="text-xl font-bold">6 Month</h3>
                   <div className="mt-4 mb-2">
                     <span className="text-4xl font-bold">₹2,499</span>
-                    <span className="text-muted-foreground">/month</span>
+                    <span className="text-muted-foreground">/6-month</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">Billed monthly with 3-month minimum</p>
+                  <p className="text-sm text-muted-foreground">Billed every 6 month</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
@@ -163,7 +163,7 @@ export default function MembershipPlans() {
               </div>
             </div>
 
-            <div className="bg-muted/30 rounded-lg p-6 md:p-8 animate-fadeInUp animate-delay-300">
+            {/*<div className="bg-muted/30 rounded-lg p-6 md:p-8 animate-fadeInUp animate-delay-300">
               <h3 className="text-xl font-bold mb-6 text-center">Detailed Feature Comparison</h3>
               <div className="overflow-x-auto">
                 <table className="w-full">
@@ -187,7 +187,7 @@ export default function MembershipPlans() {
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div>*/}
           </div>
       </div>
     </section>

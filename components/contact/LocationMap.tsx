@@ -38,7 +38,7 @@ export default function LocationMap() {
               <h3 className="text-lg font-bold mb-2">Opening Hours</h3>
               <p className="text-muted-foreground">
                 Monday - Sunday: 6:00 AM - 12:30 PM<br />
-                Monday - Sunday: 4:30 PM - 10:30 PM
+                Monday - Sunday: 4:30 PM - 10 PM
               </p>
             </div>
             <div className="text-center md:text-right">
