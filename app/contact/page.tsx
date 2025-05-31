@@ -1,6 +1,7 @@
 import ContactHero from '@/components/contact/ContactHero';
 import ContactForm from '@/components/contact/ContactForm';
 import LocationMap from '@/components/contact/LocationMap';
+import TeamSection from '@/components/about/TeamSection';
 
 export const metadata = {
   title: 'Contact Us | MAXFIT Gym - Sonarpur, Kolkata',
@@ -12,6 +13,7 @@ export default function ContactPage() {
     <>
       <ContactHero />
       <LocationMap />
+      <TeamSection />
       <ContactForm />
     </>
   );

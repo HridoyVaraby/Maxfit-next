@@ -35,9 +35,8 @@ export default function TeamSection() {
               <div className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-1">{trainer.name}</h3>
                 <p className="text-primary font-medium mb-3">{trainer.title}</p>
-                <div className="h-24 overflow-hidden mb-4 relative">
+                <div className="mb-4">
                   <p className="text-muted-foreground text-sm leading-relaxed">{trainer.bio}</p>
-                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-background to-transparent"></div>
                 </div>
                 <div className="flex justify-center space-x-4 text-muted-foreground">
                   <a href="#" className="hover:text-primary transition-colors" aria-label={`${trainer.name}'s Facebook`}>
