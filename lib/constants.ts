@@ -123,13 +123,13 @@ export const TRAINERS = [
   },
   {
     name: "Pavel",
-    title: "Trainer/Fitness Advisor",
+    title: "Physical Instructor",
     bio: "Expert in strong interpersonal communication skills, strength training, exercise program development, client assessment, weight management, and floor management.",
     image: "/team3.webp"
   },
   {
     name: "Sujan",
-    title: "Trainer/Fitness Advisor",
+    title: "Physical Instructor",
     bio: "Expert in cardio, Tabata, weight training, and strength training. Dedicated to optimizing performance.",
     image: "/team4.webp"
   },
