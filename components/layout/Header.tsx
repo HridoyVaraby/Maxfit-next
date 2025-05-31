@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 import MaxFitLogo from './MaxFitLogo';
 import { ThemeToggle } from './ThemeToggle';
 import { Button } from '@/components/ui/button';
+import { useTheme } from 'next-themes';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -21,6 +22,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const { theme } = useTheme();
+  const isLightTheme = theme === 'light';
 
   // Handle scroll event to change header style
   useEffect(() => {
@@ -54,7 +57,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${pathname === item.href ? 'text-primary' : 'text-foreground/80 hover:text-foreground hover:bg-muted'}`}
+                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${pathname === item.href ? 'text-primary' : isLightTheme && !isScrolled ? 'text-white hover:text-white hover:bg-white/10' : 'text-foreground/80 hover:text-foreground hover:bg-muted'}`}
               >
                 {item.name}
               </Link>
@@ -69,10 +72,10 @@ export default function Header() {
 
           {/* Mobile Navigation Toggle */}
           <div className="flex items-center md:hidden space-x-4">
-            <ThemeToggle />
+            <ThemeToggle className={isLightTheme && !isScrolled ? "text-white" : ""} />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-foreground/80 hover:text-foreground hover:bg-muted"
+              className={`p-2 rounded-md ${isLightTheme && !isScrolled ? 'text-white hover:text-white hover:bg-white/10' : 'text-foreground/80 hover:text-foreground hover:bg-muted'}`}
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
