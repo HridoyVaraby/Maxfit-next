@@ -59,9 +59,9 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Link href="/admin/login" className="ml-2">
-              <Button variant="outline" size="sm">
-                Admin
+            <Link href="/membership/register" className="ml-2">
+              <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90">
+                Join Now
               </Button>
             </Link>
             <ThemeToggle />
@@ -95,8 +95,10 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <Link href="/admin/login" className="px-3 py-2 text-sm font-medium rounded-md text-foreground/80 hover:text-foreground hover:bg-muted">
-                Admin
+              <Link href="/membership/register" className="mt-2">
+                <Button variant="default" className="w-full bg-primary hover:bg-primary/90">
+                  Join Now
+                </Button>
               </Link>
             </nav>
           </div>
