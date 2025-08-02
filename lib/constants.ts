@@ -41,7 +41,7 @@ export const MEMBERSHIP_PLANS = [
   },
   {
     name: '12 Months',
-    price: '4999',
+    price: '5199',
     duration: 'Year',
     features: ['Full Equipment Access', 'Unlimited Group Classes', 'Nutrition Support', 'Fitness Assessment'],
     popular: true,
